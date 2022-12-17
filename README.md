@@ -11,3 +11,7 @@ Various components for C++Builder
 
 ### LCD Display
 ![LcdDisplay](https://user-images.githubusercontent.com/7760014/208261334-89a7489f-358c-4b54-8dca-0548ea18a084.png)
+
+## To build
+
+Make `Celestial.BPK` to compile and install to the IDE's component palette
