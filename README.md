@@ -15,3 +15,5 @@ Various components for C++Builder
 ## To build
 
 Make `Celestial.BPK` to compile and install to the IDE's component palette
+
+-- Brent Engelbrecht (13 December 2004)
