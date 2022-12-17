@@ -1,0 +1,254 @@
+# ---------------------------------------------------------------------------
+!if !$d(BCB)
+BCB = $(MAKEDIR)\..
+!endif
+
+# ---------------------------------------------------------------------------
+# IDE SECTION
+# ---------------------------------------------------------------------------
+# The following section of the project makefile is managed by the BCB IDE.
+# It is recommended to use the IDE to change any of the values in this
+# section.
+# ---------------------------------------------------------------------------
+
+VERSION = BCB.04.04
+# ---------------------------------------------------------------------------
+PROJECT = Celestial.bpl
+OBJFILES = Celestial.obj TransmissionServer.obj AddressBook.obj AgentInfo.obj \
+  CmdStatsInfo.obj DialupAlerter.obj DigiClock.obj DiskMonitor.obj \
+  DiskMonitorFileInfo.obj DiskMonitorWaitThread.obj DotMatrix.obj \
+  HistoryComboBox.obj Lcd.obj MailHeaders.obj MailIdentity.obj MailUser.obj \
+  NewMailNotifier.obj Pop3Agent.obj Pop3Server.obj ServiceController.obj \
+  SmtpAgent.obj SmtpServer.obj StatusAreaIcon.obj Tokenizer.obj \
+  TransmissionClient.obj TransmissionMessage.obj DataSize.obj PopPeeker.obj \
+  CascadedList.obj MarkupParser.obj HtmlParser.obj
+RESFILES =
+RESDEPEN = $(RESFILES)
+LIBFILES =
+LIBRARIES =
+SPARELIBS = Vcl40.lib Vclx40.lib
+PACKAGES = Vcl40.bpi Vclx40.bpi
+DEFFILE =
+# ---------------------------------------------------------------------------
+PATHCPP = .;
+PATHASM = .;
+PATHPAS = .;
+PATHRC = .;
+DEBUGLIBPATH = $(BCB)\lib\debug
+RELEASELIBPATH = $(BCB)\lib\release
+USERDEFINES =
+SYSDEFINES = NO_STRICT;_RTLDLL;USEPACKAGES
+# ---------------------------------------------------------------------------
+CFLAG1 = -I$(BCB)\include;$(BCB)\include\vcl -O2 -wuse -wucp -wstv -wstu -wsig -w-rch \
+  -w-par -wnod -w-inl -wdef -Ve -a8 -6 -k- -vi -c -b- -Vx -tWM \
+  -D$(SYSDEFINES);$(USERDEFINES)
+PFLAGS = -U"..\..\program files\borland\cbuilder4\lib\release";"..\..\Program Files\Borland\CBuilder4\Lib";"..\..\Program Files\Borland\CBuilder4\Lib\Obj";"..\..\Program Files\Borland\CBuilder4\Bpl";$(RELEASELIBPATH) \
+  -I$(BCB)\include;$(BCB)\include\vcl -$Y- -$L- -$D- -v -JPHNE -M
+RFLAGS = -i$(BCB)\include;$(BCB)\include\vcl
+AFLAGS = /ic:\Projects\Celestial /i$(BCB)\include /i$(BCB)\include\vcl /mx /w2 /zn
+LFLAGS = -L"..\..\program files\borland\cbuilder4\lib\release";"..\..\Program Files\Borland\CBuilder4\Lib";"..\..\Program Files\Borland\CBuilder4\Lib\Obj";"..\..\Program Files\Borland\CBuilder4\Bpl";$(RELEASELIBPATH) \
+  -DCelestial -aa -Tpp -s -Gn -Gl -Gi -M
+# ---------------------------------------------------------------------------
+ALLOBJ = c0pkg32.obj Memmgr.Lib $(PACKAGES) sysinit.obj $(OBJFILES)
+ALLRES = $(RESFILES)
+ALLLIB = $(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib
+# ---------------------------------------------------------------------------
+!ifdef IDEOPTIONS
+
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=1
+MajorVer=1
+MinorVer=0
+Release=0
+Build=3
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=7177
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=Celestial
+FileDescription=C++ Builder 4 Package
+FileVersion=1.0.0.3
+InternalName=Celestial.bpk
+LegalCopyright=Brent Engelbrecht (c) 2004
+LegalTrademarks=
+OriginalFilename=Celestial.bpk
+ProductName=Celestial Components
+ProductVersion=1.0.0.0
+Comments=
+ReleaseDate=2004/09/20
+
+[HistoryLists\hlIncludePath]
+Count=4
+Item0=c:\Projects\Celestial;$(BCB)\include;$(BCB)\include\vcl
+Item1=$(BCB)\include;$(BCB)\include\vcl
+Item2=$(BCB)\include;$(BCB)\include\vcl;C:\Projects\Celestial
+Item3=$(BCB)\include;$(BCB)\include\vcl;\Dev\Celestial
+
+[HistoryLists\hlLibraryPath]
+Count=21
+Item0=..\..\program files\borland\cbuilder4\lib\release;..\..\Program Files\Borland\CBuilder4\Lib;..\..\Program Files\Borland\CBuilder4\Lib\Obj;..\..\Program Files\Borland\CBuilder4\Bpl
+Item1=..\..\program files\borland\cbuilder4\lib\release;..\..\Program Files\Borland\CBuilder4\Lib;..\..\Program Files\Borland\CBuilder4\Lib\Obj
+Item2=c:\dev\celestial;..\..\Program Files\Borland\CBuilder4\Lib;..\..\Program Files\Borland\CBuilder4\Lib\Obj
+Item3=..\..\Program Files\Borland\CBuilder4\Lib;..\..\Program Files\Borland\CBuilder4\Lib\Obj;\Dev\Celestial
+Item4=..\..\program files\borland\cbuilder4\lib\release;..\..\Program Files\Borland\CBuilder4\Lib;..\..\Program Files\Borland\CBuilder4\Lib\Obj;..\..\Program Files\Borland\CBuilder4\Projects
+Item5=..\..\Program Files\Borland\CBuilder4\Lib;..\..\Program Files\Borland\CBuilder4\Lib\Obj;C:\Program Files\Borland\CBuilder4\Projects
+Item6=..\..\Program Files\Borland\CBuilder4\Lib;..\..\Program Files\Borland\CBuilder4\Lib\Obj
+Item7=..\..\Program Files\Borland\CBuilder4\Lib\Release;..\..\Program Files\Borland\CBuilder4\Projects;..\..\Program Files\Borland\CBuilder4\Lib;..\..\Program Files\Borland\CBuilder4\Lib\Obj
+Item8=..\..\Program Files\Borland\CBuilder4\Projects;..\..\Program Files\Borland\CBuilder4\Lib;..\..\Program Files\Borland\CBuilder4\Lib\Obj
+Item9=..\..\..\Program Files\Borland\CBuilder4\Lib;..\..\..\Program Files\Borland\CBuilder4\Lib\Obj;..\..\..\Program Files\Borland\CBuilder4\Projects
+Item10=..\..\Program Files\Borland\CBuilder4\Lib;..\..\Program Files\Borland\CBuilder4\Lib\Obj;..\..\Program Files\Borland\CBuilder4\Lib\Vcl
+Item11=\Program Files\Borland\CBuilder4\Lib;\Program Files\Borland\CBuilder4\Lib\Obj;\Program Files\Borland\CBuilder4\Lib\Vcl
+Item12=c:\Program Files\Borland\CBuilder4\Lib;c:\Program Files\Borland\CBuilder4\Lib\Obj;c:\projects\Celestial
+Item13=..\..\Program Files\Borland\CBuilder4\Lib;..\..\Program Files\Borland\CBuilder4\Lib\Obj;..\Dev\Celestial
+Item14=..\..\Program Files\Borland\CBuilder4\Lib;..\..\Program Files\Borland\CBuilder4\Lib\Obj;\Projects\Dev\Celestial
+Item15=\Program Files\Borland\CBuilder4\Lib;\Program Files\Borland\CBuilder4\Lib\Obj
+Item16=..\..\Program Files\Borland\CBuilder4\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item17=C:\Program Files\Borland\CBuilder4\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item18=$(BCB)\lib\obj;$(BCB)\lib
+Item19=$(BCB)\lib\obj;$(BCB)\lib;C:\Dev\Celestial
+Item20=$(BCB)\lib\obj;$(BCB)\lib;\Dev\Celestial
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hIBPIOutputDir]
+Count=30
+Item0=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program Files\Borland\CBuilder4\Projects\BplItem1=C:\Program 
+Item1=
+Item2=
+Item3=
+Item4=
+Item5=
+Item6=
+Item7=
+Item8=
+Item9=
+Item10=
+Item11=
+Item12=
+Item13=
+Item14=
+Item15=
+Item16=
+Item17=
+Item18=
+Item19=
+Item20=
+Item21=
+Item22=
+Item23=
+Item24=
+Item25=
+Item26=
+Item27=
+Item28=
+Item29=
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+InMemoryExe=0
+ShowInfoMsgs=0
+
+!endif
+
+# ---------------------------------------------------------------------------
+# MAKE SECTION
+# ---------------------------------------------------------------------------
+# This section of the project file is not used by the BCB IDE.  It is for
+# the benefit of building from the command-line using the MAKE utility.
+# ---------------------------------------------------------------------------
+
+.autodepend
+# ---------------------------------------------------------------------------
+!if !$d(BCC32)
+BCC32 = bcc32
+!endif
+
+!if !$d(CPP32)
+CPP32 = cpp32
+!endif
+
+!if !$d(DCC32)
+DCC32 = dcc32
+!endif
+
+!if !$d(TASM32)
+TASM32 = tasm32
+!endif
+
+!if !$d(LINKER)
+LINKER = ilink32
+!endif
+
+!if !$d(BRCC32)
+BRCC32 = brcc32
+!endif
+
+# ---------------------------------------------------------------------------
+!if $d(PATHCPP)
+.PATH.CPP = $(PATHCPP)
+.PATH.C   = $(PATHCPP)
+!endif
+
+!if $d(PATHPAS)
+.PATH.PAS = $(PATHPAS)
+!endif
+
+!if $d(PATHASM)
+.PATH.ASM = $(PATHASM)
+!endif
+
+!if $d(PATHRC)
+.PATH.RC  = $(PATHRC)
+!endif
+# ---------------------------------------------------------------------------
+$(PROJECT): $(OBJFILES) $(RESDEPEN) $(DEFFILE)
+    $(BCB)\BIN\$(LINKER) @&&!
+    $(LFLAGS) +
+    $(ALLOBJ), +
+    $(PROJECT),, +
+    $(ALLLIB), +
+    $(DEFFILE), +
+    $(ALLRES)
+!
+# ---------------------------------------------------------------------------
+.pas.hpp:
+    $(BCB)\BIN\$(DCC32) $(PFLAGS) {$< }
+
+.pas.obj:
+    $(BCB)\BIN\$(DCC32) $(PFLAGS) {$< }
+
+.cpp.obj:
+    $(BCB)\BIN\$(BCC32) $(CFLAG1) -n$(@D) {$< }
+
+.c.obj:
+    $(BCB)\BIN\$(BCC32) $(CFLAG1) -n$(@D) {$< }
+
+.c.i:
+    $(BCB)\BIN\$(CPP32) $(CFLAG1) -n. {$< }
+
+.cpp.i:
+    $(BCB)\BIN\$(CPP32) $(CFLAG1) -n. {$< }
+
+.asm.obj:
+    $(BCB)\BIN\$(TASM32) $(AFLAGS) $<, $@
+
+.rc.res:
+    $(BCB)\BIN\$(BRCC32) $(RFLAGS) -fo$@ $<
+# ---------------------------------------------------------------------------
